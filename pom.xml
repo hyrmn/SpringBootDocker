@@ -9,8 +9,8 @@
     <artifactId>spring-boot-docker</artifactId>
     <version>0.1.0</version>
 	<packaging>jar</packaging>
-
-	<description>Tiny spring boot app running on Docker</description>
+	
+    <description>Tiny spring boot app running on Docker</description>
 
     <parent>
         <groupId>org.springframework.boot</groupId>
@@ -36,6 +36,7 @@
 
 
     <build>
+        <finalName>spring-boot-docker</finalName>
         <plugins>
             <plugin>
                 <groupId>org.springframework.boot</groupId>

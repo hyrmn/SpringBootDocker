@@ -1,7 +1,10 @@
 FROM maven:3.5.4-jdk-8-alpine as compiler
 COPY src /usr/src/app/src  
 COPY pom.xml /usr/src/app
-RUN mvn -B -f /usr/src/app/pom.xml -s /usr/share/maven/ref/settings-docker.xml dependency:resolve clean package
+RUN mvn -B -f /usr/src/app/pom.xml \
+        -s /usr/share/maven/ref/settings-docker.xml \
+        dependency:resolve \
+        clean package
 
 FROM openjdk:8-jre-alpine
 VOLUME /tmp
